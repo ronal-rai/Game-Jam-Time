@@ -1,4 +1,7 @@
 extends Node2D
+
+var ownerEntity: Entity
+
 @onready var sheriff: PlayerRanged = $".."
 
 
