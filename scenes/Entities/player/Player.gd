@@ -1,20 +1,20 @@
-extends Entity
+extends CharacterBody2D
 class_name Player
 
 @export var device: int
-signal PlayerHit(damage: float)
+
 
 
 const ACCELERATION: float = 50
-const MAX_SPEED: float = 900
+const MAX_SPEED: float = 500
 const DECELERATION: float = 90
 
 const DEADZONE: float = 0.08
 const AIM_DEADZONE: float = 0.25
 
-const DASH_SPEED: float = 1800
-const DASH_TIME: float = 0.18       
-const DASH_COOLDOWN: float = 0.5    
+const DASH_SPEED: float = 1400
+const DASH_TIME: float = 0.18
+const DASH_COOLDOWN: float = 0.8
 
 var is_dashing := false
 var dash_timer := 0.0
@@ -53,7 +53,7 @@ func applyDeadzone():
 		direction.x = round(direction.x)
 	if  abs(direction.y) < abs(DEADZONE) or abs(direction.y) > abs(1-DEADZONE):
 		direction.y = round(direction.y)
-		
+
 func _input(event: InputEvent) -> void:
 	# Only react to this player's controller
 	if event is InputEventJoypadButton and event.device == device \
@@ -77,14 +77,14 @@ func _physics_process(delta: float) -> void:
 	Input.get_joy_axis(device, JOY_AXIS_LEFT_Y))
 	direction = direction.limit_length(1.0)
 	applyDeadzone()
-	
+
 	updateAiming()
-	
+
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 
-# updates velocity
+#updates velocity
 	dash_cooldown = maxf(dash_cooldown - delta, 0.0)
 
 	if is_dashing:
@@ -102,8 +102,3 @@ func _physics_process(delta: float) -> void:
 
 func attack():
 	print("attacked")
-	
-func Hit(damage:float):
-	PlayerHit.emit(damage)
-	
-	
