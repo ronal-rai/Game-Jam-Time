@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://fkglndawctbb"]
 
 [ext_resource type="Script" uid="uid://b4l0wg7yq0r5r" path="res://scenes/player/Player_Melee.gd" id="1_6g75q"]
+[ext_resource type="Script" uid="uid://c1g5jjhep713o" path="res://scenes/player/characters/MeleeHelper.gd" id="2_guocq"]
+[ext_resource type="Texture2D" uid="uid://dyuqgdso55rpu" path="res://assets/Placeholders/Weapons/Ranged/GunPlaceholder.png" id="3_712db"]
+[ext_resource type="Texture2D" uid="uid://dhbm1h0mqqu6b" path="res://icon.svg" id="4_tqcx4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ewje"]
 
@@ -10,3 +13,15 @@ metadata/_custom_type_script = "uid://b4l0wg7yq0r5r"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=653204927]
 shape = SubResource("RectangleShape2D_7ewje")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=165715229]
+script = ExtResource("2_guocq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=1908885454]
+texture = ExtResource("3_712db")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=183694675]
+texture = ExtResource("4_tqcx4")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=76622622]
+zoom = Vector2(0.5, 0.5)
