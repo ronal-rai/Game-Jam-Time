@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b4x4wwmoh3vp8"]
+
+[ext_resource type="Script" uid="uid://b5frn70ex0ynp" path="res://Player/Player.gd" id="1_od8gu"]
+
+[node name="Sherif" type="CharacterBody2D" unique_id=669618132]
+script = ExtResource("1_od8gu")
+metadata/_custom_type_script = "uid://b5frn70ex0ynp"
