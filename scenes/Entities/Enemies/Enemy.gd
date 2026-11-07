@@ -1,9 +1,10 @@
+@abstract
 extends Entity
 class_name Enemy
 
 signal EnemyDeath(TimeRechage: float)
 
-var TimeRechage: float
+var TimeRechage: float #how much time the enemy gives uppon death
 var Health: float
 
 func _init(setHealth: float,setTimeRechage:float) -> void:

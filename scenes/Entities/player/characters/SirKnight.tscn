@@ -9,7 +9,6 @@
 
 [node name="SirKnight" type="CharacterBody2D" unique_id=589076665]
 script = ExtResource("1_yp88f")
-device = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=653204927]
 shape = SubResource("RectangleShape2D_7ewje")
@@ -24,4 +23,3 @@ texture = ExtResource("3_fjlih")
 texture = ExtResource("4_u3i24")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=76622622]
-zoom = Vector2(0.5, 0.5)
