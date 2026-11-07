@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ck63p5pf71s5w"]
+
+[ext_resource type="Script" uid="uid://dc4a4qh5c7dwe" path="res://scenes/pickup.gd" id="1_pg2rt"]
+
+[node name="Pickup" type="Area2D" unique_id=2080411669]
+script = ExtResource("1_pg2rt")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=2113270856]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1102609777]
+
+[node name="PickupSound" type="AudioStreamPlayer2D" parent="." unique_id=2106851052]

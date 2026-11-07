@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://ctc4so0io2wym"]
 
 [ext_resource type="Texture2D" uid="uid://caf2ffeak483f" path="res://assets/Placeholders/icon_16.png" id="1_4ikea"]
+[ext_resource type="PackedScene" uid="uid://llqjaohcysym" path="res://scenes/player/player_chr.tscn" id="1_is5ow"]
 [ext_resource type="Texture2D" uid="uid://bqgcy7a0b20y5" path="res://assets/Placeholders/icon.png" id="2_is5ow"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bq48c"]
@@ -81,8 +82,10 @@ sources/2 = SubResource("TileSetAtlasSource_yutty")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ikea"]
 texture = ExtResource("1_4ikea")
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_e6hjw"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_4ikea")
 
 [node name="Room1" type="Node2D" unique_id=1570168496]
@@ -97,3 +100,6 @@ tile_map_data = PackedByteArray("AAAAAP//AAAAAAAAAAABAP//AAAAAAAAAAACAP//AAAAAAA
 tile_set = SubResource("TileSet_e6hjw")
 
 [node name="World" type="Node2D" parent="." unique_id=2051494904]
+
+[node name="Player1" parent="." unique_id=1297665754 instance=ExtResource("1_is5ow")]
+position = Vector2(229, 178)
