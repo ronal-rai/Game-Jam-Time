@@ -1,7 +1,15 @@
 [gd_scene format=3 uid="uid://b4x4wwmoh3vp8"]
 
-[ext_resource type="Script" uid="uid://b5frn70ex0ynp" path="res://Player/Player.gd" id="1_od8gu"]
+[ext_resource type="Script" uid="uid://cb2n7ox73muv4" path="res://scenes/player/Player_Ranged.gd" id="1_p302s"]
 
-[node name="Sherif" type="CharacterBody2D" unique_id=669618132]
-script = ExtResource("1_od8gu")
-metadata/_custom_type_script = "uid://b5frn70ex0ynp"
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ewje"]
+size = Vector2(30, 54)
+
+[node name="Sherif" type="CharacterBody2D" unique_id=1567701819]
+script = ExtResource("1_p302s")
+metadata/_custom_type_script = "uid://cb2n7ox73muv4"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=451819373]
+shape = SubResource("RectangleShape2D_7ewje")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1175295716]
