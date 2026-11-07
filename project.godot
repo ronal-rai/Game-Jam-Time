@@ -27,6 +27,13 @@ window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"
 
+[layer_names]
+
+2d_render/layer_1="Walls"
+2d_render/layer_2="Players"
+2d_render/layer_3="Enemies"
+2d_render/layer_4="Pickups"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
