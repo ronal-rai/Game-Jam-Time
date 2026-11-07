@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://fkglndawctbb"]
+
+[ext_resource type="Script" uid="uid://b5frn70ex0ynp" path="res://Player/Player.gd" id="1_k64nc"]
+
+[node name="SirKnight" type="CharacterBody2D" unique_id=294685560]
+script = ExtResource("1_k64nc")
+metadata/_custom_type_script = "uid://b5frn70ex0ynp"

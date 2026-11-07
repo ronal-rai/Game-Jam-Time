@@ -1,14 +1,42 @@
 extends CharacterBody2D
 class_name Player
 
+@export var device: int
+
+
 const ACCELERATION: float = 50
 const MAX_SPEED: float = 900
 const DECELERATION: float = 90
+
 const DEADZONE: float = 0.08
-@export var device: int
+const AIM_DEADZONE: float = 0.25
+
 var direction: Vector2
-	
-	
+var directionAiming: Vector2
+var equip: weapon
+
+# Reads the right stick and returns a vector (length 0..1).
+# Returns Vector2.ZERO when the stick is inside the deadzone.
+func read_aim_stick() -> Vector2:
+	var stick := Vector2(
+		Input.get_joy_axis(device, JOY_AXIS_RIGHT_X),
+		Input.get_joy_axis(device, JOY_AXIS_RIGHT_Y))
+	if stick.length() < AIM_DEADZONE:
+		return Vector2.ZERO
+	return stick.limit_length(1.0)
+
+
+# Public getter: returns the current aim direction as a unit vector.
+func get_aim_direction() -> Vector2:
+	return directionAiming
+
+
+func updateAiming() -> void:
+	var stick := read_aim_stick()
+	if stick != Vector2.ZERO:
+		directionAiming = stick.normalized()
+		# Optional: rotate a sprite/weapon to face the aim direction
+		# $Weapon.rotation = directionAiming.angle()
 
 func applyDeadzone():
 	if  abs(direction.x) < abs(DEADZONE) or abs(direction.x) > abs(1-DEADZONE):
@@ -21,15 +49,16 @@ func _physics_process(delta: float) -> void:
 	direction = Vector2(
 	Input.get_joy_axis(device, JOY_AXIS_LEFT_X),
 	Input.get_joy_axis(device, JOY_AXIS_LEFT_Y))
-	direction.normalized()
+	direction = direction.limit_length(1.0)
 	applyDeadzone()
-	print(direction)
-
+	
+	updateAiming()
+	
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 
-# acellerates and 
+# updates velocity
 	if direction != Vector2.ZERO:
 		# Accelerate toward the target velocity (direction * max speed)
 		velocity = velocity.move_toward(direction * MAX_SPEED, ACCELERATION)
@@ -40,3 +69,6 @@ func _physics_process(delta: float) -> void:
 	
 
 	move_and_slide()
+
+func attack():
+	print("attacked")
