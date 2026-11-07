@@ -8,9 +8,9 @@ var ownerEntity: Entity
 
 @export var hitbox:CollisionShape2D
 
-func _init(Direction:Vector2,Speed: float,onwner :Entity) -> void:
+func _init(Direction:Vector2,Speed: float,newowner :Entity) -> void:
 	velocity = Direction*Speed
-	ownerEntity = owner
+	ownerEntity = newowner
 
 
 func _physics_process(delta: float) -> void:

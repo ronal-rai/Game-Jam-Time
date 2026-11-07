@@ -76,6 +76,10 @@ func add_time(amount: float):
 	time_left = clampf(time_left + amount, 0.0, max_time)
 	time_changed.emit(time_left, max_time)
 
+func remove_time(amount: float):
+	time_left = clampf(time_left - amount, 0.0, max_time)
+	time_changed.emit(time_left, max_time)
+
 func _unhandled_input(event):
 	if not OS.is_debug_build():
 		return
@@ -84,3 +88,4 @@ func _unhandled_input(event):
 			apply_time_effect(0.0, 3.0)
 		if event.keycode == KEY_G:
 			apply_time_effect(0.5, 5.0)
+			

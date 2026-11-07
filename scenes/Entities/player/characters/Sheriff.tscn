@@ -1,30 +1,150 @@
 [gd_scene format=3 uid="uid://b4x4wwmoh3vp8"]
 
-[ext_resource type="Script" uid="uid://cb2n7ox73muv4" path="res://scenes/Entities/player/Player_Ranged.gd" id="1_p302s"]
-[ext_resource type="Script" uid="uid://dc47wtvcfoxl8" path="res://scenes/Entities/player/characters/gunHelper.gd" id="2_kmfsh"]
-[ext_resource type="Texture2D" uid="uid://dyuqgdso55rpu" path="res://assets/Placeholders/Weapons/Ranged/GunPlaceholder.png" id="3_1u53v"]
-[ext_resource type="Texture2D" uid="uid://dhbm1h0mqqu6b" path="res://icon.svg" id="4_e0cww"]
+[ext_resource type="Script" uid="uid://cb2n7ox73muv4" path="res://scenes/Entities/player/Player_Ranged.gd" id="1_jj5ls"]
+[ext_resource type="Texture2D" uid="uid://cy1ebphmk2d0e" path="res://assets/players/Wild West Pixel Cowboy - Pixel Art Asset Pack/Wild West Pixel Cowboy - Pixel Art Asset Pack/death/cowboy_death_spritesheet.png" id="2_w2yy1"]
+[ext_resource type="Texture2D" uid="uid://b42bufmltrmvo" path="res://assets/players/Wild West Pixel Cowboy - Pixel Art Asset Pack/Wild West Pixel Cowboy - Pixel Art Asset Pack/idle/cowboy_idle_spritesheet.png" id="3_qmttr"]
+[ext_resource type="Texture2D" uid="uid://xdpouww6g6cf" path="res://assets/players/Wild West Pixel Cowboy - Pixel Art Asset Pack/Wild West Pixel Cowboy - Pixel Art Asset Pack/walk/cowboy_walk_up_spritesheet.png" id="4_udhdt"]
+[ext_resource type="Script" uid="uid://dc47wtvcfoxl8" path="res://scenes/Entities/player/characters/gunHelper.gd" id="5_ewxsj"]
+[ext_resource type="Texture2D" uid="uid://dyuqgdso55rpu" path="res://assets/Placeholders/Weapons/Ranged/GunPlaceholder.png" id="6_4nfr5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wf60p"]
+atlas = ExtResource("2_w2yy1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxaa1"]
+atlas = ExtResource("2_w2yy1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t15ts"]
+atlas = ExtResource("2_w2yy1")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyl4f"]
+atlas = ExtResource("2_w2yy1")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hx373"]
+atlas = ExtResource("2_w2yy1")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8usig"]
+atlas = ExtResource("2_w2yy1")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vijyw"]
+atlas = ExtResource("3_qmttr")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gg047"]
+atlas = ExtResource("3_qmttr")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gekq6"]
+atlas = ExtResource("3_qmttr")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0tjg"]
+atlas = ExtResource("3_qmttr")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vwcu"]
+atlas = ExtResource("4_udhdt")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v28e5"]
+atlas = ExtResource("4_udhdt")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ktnwx"]
+atlas = ExtResource("4_udhdt")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlpl2"]
+atlas = ExtResource("4_udhdt")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7ewje"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wf60p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxaa1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t15ts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wyl4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hx373")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8usig")
+}],
+"loop": 1,
+"name": &"Dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vijyw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gg047")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gekq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f0tjg")
+}],
+"loop": 1,
+"name": &"down_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0vwcu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v28e5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ktnwx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlpl2")
+}],
+"loop": 1,
+"name": &"walk_up",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ewje"]
-size = Vector2(30, 54)
+size = Vector2(3, 5)
 
 [node name="Sheriff" type="CharacterBody2D" unique_id=1567701819]
-script = ExtResource("1_p302s")
+script = ExtResource("1_jj5ls")
 metadata/_custom_type_script = "uid://cb2n7ox73muv4"
 
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1044700455]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_7ewje")
+animation = &"Dead"
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=451819373]
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_7ewje")
 
 [node name="Gun" type="Node2D" parent="." unique_id=1175295716]
 position = Vector2(-54.49, 0)
-script = ExtResource("2_kmfsh")
+script = ExtResource("5_ewxsj")
 
 [node name="Sprite2D" type="Sprite2D" parent="Gun" unique_id=939420599]
-texture = ExtResource("3_1u53v")
+texture = ExtResource("6_4nfr5")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=697607321]
 zoom = Vector2(0.52, 0.52)
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1459236888]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_e0cww")

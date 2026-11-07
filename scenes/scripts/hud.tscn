@@ -2,26 +2,54 @@
 
 [ext_resource type="Script" uid="uid://cgim6isno6ra5" path="res://hud.gd" id="1_vo1ee"]
 [ext_resource type="FontFile" uid="uid://1u7ycg7ujnk4" path="res://assets/m3x6.ttf" id="2_7mydc"]
+[ext_resource type="Theme" uid="uid://bmtgi7iju81sr" path="res://assets/style/new_theme.tres" id="2_rndty"]
+[ext_resource type="Texture2D" uid="uid://barwpx8v4m2e" path="res://assets/circle.png" id="3_ysf3m"]
 
 [node name="HUD" type="CanvasLayer" unique_id=1836798670]
 script = ExtResource("1_vo1ee")
+
+[node name="Panel" type="Panel" parent="." unique_id=2059891768]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -320.0
+offset_top = -10.0
+offset_right = 320.0
+offset_bottom = 72.0
+grow_horizontal = 2
+theme = ExtResource("2_rndty")
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=978458131]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -60.0
+offset_right = 60.0
+offset_bottom = 120.0
+grow_horizontal = 2
+texture = ExtResource("3_ysf3m")
 
 [node name="Margin" type="MarginContainer" parent="." unique_id=580416136]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -128.0
-offset_right = 128.0
-offset_bottom = 13.0
+offset_left = -81.0
+offset_top = -4.0
+offset_right = 90.0
+offset_bottom = 85.0
 grow_horizontal = 2
 
 [node name="HBox" type="HBoxContainer" parent="Margin" unique_id=938864571]
 layout_mode = 2
+size_flags_horizontal = 4
 alignment = 1
 
 [node name="TimeLabel" type="Label" parent="Margin/HBox" unique_id=972257658]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_7mydc")
+theme_override_font_sizes/font_size = 75
 text = "aaa"
 
 [node name="TickSound" type="AudioStreamPlayer" parent="." unique_id=282291287]
