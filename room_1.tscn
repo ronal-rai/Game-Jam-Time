@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://6nw2gpxxvkce" path="res://room_1.gd" id="1_yutty"]
 [ext_resource type="Texture2D" uid="uid://bqgcy7a0b20y5" path="res://assets/Placeholders/icon.png" id="2_is5ow"]
 [ext_resource type="Texture2D" uid="uid://csgdxq8lqywk4" path="res://assets/Placeholders/iconRed.png" id="6_e6hjw"]
+[ext_resource type="PackedScene" uid="uid://b54u11ktq1orp" path="res://scenes/freeze_pickup.tscn" id="7_hrfef"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bq48c"]
 texture = ExtResource("1_4ikea")
@@ -118,6 +119,9 @@ device = 1
 
 [node name="Sprite2D" parent="Player2" index="1" unique_id=1023959932]
 texture = ExtResource("6_e6hjw")
+
+[node name="Freeze_Pickup" parent="." unique_id=2080411669 instance=ExtResource("7_hrfef")]
+position = Vector2(389, 116)
 
 [editable path="Player1"]
 [editable path="Player2"]

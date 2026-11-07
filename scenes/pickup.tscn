@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dc4a4qh5c7dwe" path="res://scenes/pickup.gd" id="1_pg2rt"]
 
 [node name="Pickup" type="Area2D" unique_id=2080411669]
+collision_mask = 2
 script = ExtResource("1_pg2rt")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=2113270856]
