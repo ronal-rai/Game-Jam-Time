@@ -109,6 +109,7 @@ tile_set = SubResource("TileSet_e6hjw")
 
 [node name="Player2" parent="." unique_id=1297665754 instance=ExtResource("1_is5ow")]
 position = Vector2(389, 116)
+collision_layer = 2
 device = 1
 
 [node name="Sprite2D" parent="Player2" index="1" unique_id=1023959932]
@@ -116,5 +117,7 @@ texture = ExtResource("6_e6hjw")
 
 [node name="Player1" parent="." unique_id=756409671 instance=ExtResource("1_is5ow")]
 position = Vector2(229, 178)
+collision_layer = 2
 
 [editable path="Player2"]
+[editable path="Player1"]
