@@ -2,7 +2,7 @@ extends Entity
 class_name Player
 
 @export var device: int
-
+signal PlayerHit(damage: float)
 
 const ACCELERATION: float = 50
 const MAX_SPEED: float = 900
@@ -71,3 +71,8 @@ func _physics_process(delta: float) -> void:
 
 func attack():
 	print("attacked")
+	
+func Hit(damage:float):
+	PlayerHit.emit(damage)
+	
+	
