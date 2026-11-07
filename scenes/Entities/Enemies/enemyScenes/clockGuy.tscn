@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://7h85lj6j748v"]
+
+[ext_resource type="Script" uid="uid://6lwoyad5n87v" path="res://ClockGuy.gd" id="1_sfqb4"]
+[ext_resource type="Texture2D" uid="uid://csb38lncfguqe" path="res://assets/alarm_clock_enemy_sheet_16 (1).png" id="2_tkwio"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwe0g"]
+atlas = ExtResource("2_tkwio")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvdui"]
+atlas = ExtResource("2_tkwio")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xorql"]
+atlas = ExtResource("2_tkwio")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44yb1"]
+atlas = ExtResource("2_tkwio")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ptm3"]
+atlas = ExtResource("2_tkwio")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4o4v"]
+atlas = ExtResource("2_tkwio")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7ost"]
+atlas = ExtResource("2_tkwio")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g71pl"]
+atlas = ExtResource("2_tkwio")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vv8mu"]
+atlas = ExtResource("2_tkwio")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6m8r"]
+atlas = ExtResource("2_tkwio")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57igi"]
+atlas = ExtResource("2_tkwio")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qk64p"]
+atlas = ExtResource("2_tkwio")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gmxvo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwe0g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvdui")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xorql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_44yb1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ptm3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4o4v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7ost")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g71pl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vv8mu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6m8r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_57igi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qk64p")
+}],
+"loop": 1,
+"name": &"explode",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gmxvo"]
+size = Vector2(7, 8)
+
+[node name="ClockGuy" type="CharacterBody2D" unique_id=877323797]
+script = ExtResource("1_sfqb4")
+metadata/_custom_type_script = "uid://6lwoyad5n87v"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1506399404]
+sprite_frames = SubResource("SpriteFrames_gmxvo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2132783179]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_gmxvo")
