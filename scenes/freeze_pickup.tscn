@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b54u11ktq1orp"]
+
+[ext_resource type="PackedScene" uid="uid://ck63p5pf71s5w" path="res://scenes/pickup.tscn" id="1_rwiqc"]
+[ext_resource type="Script" uid="uid://u0oy2qwg6o7n" path="res://scenes/freeze_pickup.gd" id="2_ajexc"]
+[ext_resource type="Texture2D" uid="uid://0upw8q7dojgf" path="res://assets/IceCube.png" id="2_obesr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j40ey"]
+
+[node name="Freeze_Pickup" unique_id=2080411669 instance=ExtResource("1_rwiqc")]
+script = ExtResource("2_ajexc")
+
+[node name="Sprite" parent="." index="0" unique_id=2113270856]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_obesr")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=1102609777]
+shape = SubResource("CapsuleShape2D_j40ey")

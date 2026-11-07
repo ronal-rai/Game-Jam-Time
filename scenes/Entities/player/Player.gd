@@ -3,8 +3,6 @@ class_name Player
 
 @export var device: int
 
-
-
 const ACCELERATION: float = 50
 const MAX_SPEED: float = 500
 const DECELERATION: float = 90
