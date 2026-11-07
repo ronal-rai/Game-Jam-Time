@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://4lx5dpdl1ash"]
+
+[ext_resource type="Script" uid="uid://cgim6isno6ra5" path="res://hud.gd" id="1_vo1ee"]
+[ext_resource type="FontFile" uid="uid://1u7ycg7ujnk4" path="res://assets/m3x6.ttf" id="2_7mydc"]
+
+[node name="HUD" type="CanvasLayer" unique_id=1836798670]
+script = ExtResource("1_vo1ee")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=580416136]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -128.0
+offset_right = 128.0
+offset_bottom = 13.0
+grow_horizontal = 2
+
+[node name="HBox" type="HBoxContainer" parent="Margin" unique_id=938864571]
+layout_mode = 2
+alignment = 1
+
+[node name="TimeLabel" type="Label" parent="Margin/HBox" unique_id=972257658]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7mydc")
+text = "aaa"
+
+[node name="TickSound" type="AudioStreamPlayer" parent="." unique_id=282291287]
