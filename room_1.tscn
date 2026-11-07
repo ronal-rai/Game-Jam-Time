@@ -120,8 +120,11 @@ device = 1
 [node name="Sprite2D" parent="Player2" index="1" unique_id=1023959932]
 texture = ExtResource("6_e6hjw")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player2" unique_id=349021115]
+
 [node name="Freeze_Pickup" parent="." unique_id=2080411669 instance=ExtResource("7_hrfef")]
-position = Vector2(389, 116)
+position = Vector2(1216, 312)
+duration = 3.0
 
 [editable path="Player1"]
 [editable path="Player2"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ne8raoc5yrgr"
-path="res://.godot/imported/New Piskel (3).png-cc6b69ada80995fb87eae09a0be2517c.ctex"
+uid="uid://dwihrhj1yr3di"
+path="res://.godot/imported/arrow_2.png-ad56601be4474f4fdd4585c0ac2113bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://New Piskel (3).png"
-dest_files=["res://.godot/imported/New Piskel (3).png-cc6b69ada80995fb87eae09a0be2517c.ctex"]
+source_file="res://assets/SpriteMaps/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/arrow/arrow_2.png"
+dest_files=["res://.godot/imported/arrow_2.png-ad56601be4474f4fdd4585c0ac2113bf.ctex"]
 
 [params]
 
