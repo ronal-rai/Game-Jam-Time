@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://fkglndawctbb"]
 
-[ext_resource type="Script" uid="uid://b5frn70ex0ynp" path="res://Player/Player.gd" id="1_k64nc"]
+[ext_resource type="Script" uid="uid://b4l0wg7yq0r5r" path="res://scenes/player/Player_Melee.gd" id="1_6g75q"]
 
-[node name="SirKnight" type="CharacterBody2D" unique_id=294685560]
-script = ExtResource("1_k64nc")
-metadata/_custom_type_script = "uid://b5frn70ex0ynp"
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ewje"]
+
+[node name="SirKnight" type="CharacterBody2D" unique_id=589076665]
+script = ExtResource("1_6g75q")
+metadata/_custom_type_script = "uid://b4l0wg7yq0r5r"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=653204927]
+shape = SubResource("RectangleShape2D_7ewje")

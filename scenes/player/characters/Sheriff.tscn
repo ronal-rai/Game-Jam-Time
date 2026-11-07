@@ -1,15 +1,30 @@
 [gd_scene format=3 uid="uid://b4x4wwmoh3vp8"]
 
 [ext_resource type="Script" uid="uid://cb2n7ox73muv4" path="res://scenes/player/Player_Ranged.gd" id="1_p302s"]
+[ext_resource type="Script" uid="uid://dc47wtvcfoxl8" path="res://scenes/player/characters/gunHelper.gd" id="2_kmfsh"]
+[ext_resource type="Texture2D" uid="uid://dyuqgdso55rpu" path="res://assets/Placeholders/Weapons/Ranged/GunPlaceholder.png" id="3_1u53v"]
+[ext_resource type="Texture2D" uid="uid://dhbm1h0mqqu6b" path="res://icon.svg" id="4_e0cww"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ewje"]
 size = Vector2(30, 54)
 
-[node name="Sherif" type="CharacterBody2D" unique_id=1567701819]
+[node name="Sheriff" type="CharacterBody2D" unique_id=1567701819]
 script = ExtResource("1_p302s")
 metadata/_custom_type_script = "uid://cb2n7ox73muv4"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=451819373]
 shape = SubResource("RectangleShape2D_7ewje")
 
-[node name="Node2D" type="Node2D" parent="." unique_id=1175295716]
+[node name="Gun" type="Node2D" parent="." unique_id=1175295716]
+position = Vector2(-54.49, 0)
+script = ExtResource("2_kmfsh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Gun" unique_id=939420599]
+texture = ExtResource("3_1u53v")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=697607321]
+zoom = Vector2(0.52, 0.52)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1459236888]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_e0cww")

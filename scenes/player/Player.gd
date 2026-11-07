@@ -30,13 +30,12 @@ func read_aim_stick() -> Vector2:
 func get_aim_direction() -> Vector2:
 	return directionAiming
 
-
+# updates the aiming
 func updateAiming() -> void:
 	var stick := read_aim_stick()
 	if stick != Vector2.ZERO:
 		directionAiming = stick.normalized()
-		# Optional: rotate a sprite/weapon to face the aim direction
-		# $Weapon.rotation = directionAiming.angle()
+
 
 func applyDeadzone():
 	if  abs(direction.x) < abs(DEADZONE) or abs(direction.x) > abs(1-DEADZONE):
