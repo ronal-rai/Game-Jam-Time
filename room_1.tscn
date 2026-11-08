@@ -118,6 +118,7 @@ collision_layer = 2
 device = 1
 
 [node name="Sprite2D" parent="Player2" index="1" unique_id=1023959932]
+position = Vector2(192, 357)
 texture = ExtResource("6_e6hjw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player2" unique_id=349021115]
